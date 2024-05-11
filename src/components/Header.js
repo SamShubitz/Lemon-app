@@ -1,9 +1,9 @@
 export default function Header() {
     return (
-      <header>
-        <img src="/Logo.svg" alt="logo"/>
-        <nav>
-          <ul>
+      <header className="app-header">
+        <img className="header-image" src="/Logo.svg" alt="logo"/>
+        <nav className="header-nav">
+          <ul className="nav-list">
             <li>Home</li>
             <li>About</li>
             <li>Menu</li>

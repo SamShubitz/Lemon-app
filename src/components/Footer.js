@@ -1,6 +1,6 @@
 export default function Footer() {
     return (
-        <footer>
+      <footer className="app-footer">
         <img src="/Logo.svg" alt="logo"></img>
         <nav>
           <ul>
