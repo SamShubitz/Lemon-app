@@ -1,7 +1,5 @@
 .app {
     height: 150vh;
-    display: grid;
-    grid-template-rows: 1fr 4fr 7fr 6fr 6fr 4fr;
 }
 
 .button {
@@ -14,30 +12,28 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 1rem;
+    font-size: .75rem;
     font-weight: bold;
 }
 
 .app-header {
-    margin-right: 5rem;
-    max-width: 100%;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    display: flex;
+    justify-content: center;
 }
 
 .header-image {
     height: 90px;
     width: 200px;
-    grid-column: 4;
 }
 
 .header-nav {
-    grid-column: 6 / 13;
     margin-bottom: 2rem;
+    width: 55%;
 }
 
 .nav-list {
     margin-top: 2.5rem;
+    margin-left: 3rem;
     font-weight: bold;
     list-style: none;
     white-space: nowrap;
@@ -49,8 +45,6 @@
     display: inline;
     flex: 1;
     flex-basis: auto;
-    align-items: center;
-    justify-content: center;
 }
 
 .article-one {
@@ -72,9 +66,89 @@
     margin-bottom: -1rem;
 }
 
-.image-right {
-    margin-top: 3rem;
+.right-panel-image {
+    margin-top: 4rem;
     border-radius: 16px;
     grid-column: 9;
-    max-height: 310px;
+    height: 19rem;
+}
+
+.article-two {
+    margin-top: 4rem;
+    grid-template-rows: 1fr 3fr;
+}
+
+.specials-header {
+    display: flex;
+    justify-content: space-around;
+    margin-inline: 3rem;
+    margin-bottom: 1rem;
+}
+
+.specials-header > h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+}
+
+.menu-button {
+   font-weight: normal;
+   font-size: 1rem;
+   border-radius: 12px;
+   justify-self: end;
+   padding-inline: 3rem;
+   padding-block: 1rem;
+   align-self: start;
+   white-space: nowrap
+}
+
+.card-section {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 2rem;
+    overflow: hidden;
+}
+
+.card {
+    width: 16rem;
+    height: auto;
+    padding-bottom: 2rem;
+    background-color: #EDEFEE;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 1rem;
+}
+
+.card-text {
+    margin-inline: 1rem;
+    color: #000000;
+}
+
+.price {
+    color: #EE9972;
+    margin-left: 1rem;
+}
+
+.card-title, .price {
+    display: inline;
+    margin-right: 3rem;
+    white-space: nowrap;
+}
+
+.card-description {
+    height: 9rem;
+}
+
+.card-image {
+    height: 10rem;
+    width: 16rem;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    margin-bottom: 1rem;
 }

@@ -9,9 +9,9 @@ return (
         <p>We are a family owned Mediterranean
         restaurant, focused on traditional
         recipes served with a modern twist.</p>
-        <Button>Reserve a table</Button>
+        <Button className="button">Reserve a table</Button>
         </section>
-        <img className="image-right" src="/restaurantfood.jpg" alt="promo plate" width="300"/>
+        <img className="right-panel-image" src="/restaurantfood.jpg" alt="promo plate" width="300"/>
     </article>
     );
 }

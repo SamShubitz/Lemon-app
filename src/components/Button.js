@@ -1,6 +1,7 @@
-export default function Button({children}) {
+export default function Button({className, children}) {
+
     return (
-        <div className="button">
+        <div className={className}>
             {children}
         </div>
     );
