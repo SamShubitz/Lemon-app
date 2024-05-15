@@ -1,8 +1,8 @@
 import Button from './Button'
 
-export default function ArticleOne() {
+export default function Hero() {
 return (
-    <article className="article-one">
+    <article className="hero">
         <section className="left-panel">
         <h1>Little Lemon</h1>
         <h2>Chicago</h2>
@@ -11,7 +11,7 @@ return (
         recipes served with a modern twist.</p>
         <Button className="button">Reserve a table</Button>
         </section>
-        <img className="right-panel-image" src="/restaurantfood.jpg" alt="promo plate" width="300"/>
+        <img className="hero-image" src="/restaurantfood.jpg" alt="promo plate" width="300"/>
     </article>
     );
 }
