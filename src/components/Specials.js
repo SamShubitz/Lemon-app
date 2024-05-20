@@ -1,5 +1,7 @@
 import Button from './Button';
 import Card from './Card'
+import { Link } from 'react-router-dom';
+import Template from './Template';
 
 const menu = [
     { id: 1, image: './greek salad.jpg',title: 'Greek salad', price: '$12.99',
@@ -18,7 +20,9 @@ export default function ArticleTwo() {
         <article className="article-two">
             <section className="specials-header">
                 <h2>Specials</h2>
-                <Button className="button menu-button">Online Menu</Button>
+                <Link to="/menu" element={<Template/>}>
+                    <Button className="button menu-button">Online Menu</Button>
+                </Link>
             </section>
             <section className="card-section">
                 {menu.map(item => (

@@ -1,5 +1,8 @@
 .app {
-    height: 150vh;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
 }
 
 li {
@@ -18,6 +21,10 @@ li {
     display: inline-block;
     font-size: .75rem;
     font-weight: bold;
+}
+
+.button:hover {
+    background-color: #dab918;
 }
 
 .app-header {
@@ -87,9 +94,7 @@ li {
 .hero-image {
     margin-top: 4rem;
     border-radius: 16px;
-    grid-column: 9;
     height: 19rem;
-    min-width: 0;
 }
 
 @media screen and (max-width: 590px) {
@@ -243,16 +248,19 @@ li {
 }
 
 .about-section {
-    margin-top: 5rem;
+    flex-grow: 1;
+    background-color: #F4CE14;
+    color: #000000;
+    padding-top: 5rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 3rem;
+    padding-bottom: 3rem;
 }
 
 .about-text {
     border-radius: 16px;
-    width: 22rem;
+    width: 20rem;
     margin-top: -2rem;
 }
 
@@ -263,16 +271,21 @@ li {
     margin-left: 2rem;
 }
 
+.about-image-section > img {
+    border-radius: 8px;
+}
+
 .under-image {
     grid-column: 1 / span 8;
     grid-row: 1;
-    padding-top: 30%;
-    z-index: -1;
+    margin-top: 30%;
+    z-index: 0;
 }
 
 .over-image {
     grid-column: 6 / -1;
     grid-row: 1;
+    z-index: 1;
 }
 
 .about-image-section > img {
@@ -305,6 +318,7 @@ li {
     height: auto;
     align-self: flex-start;
     margin-right: 2rem;
+    margin-left: 1rem;
     margin-top: 1rem;
 
 }
@@ -316,4 +330,23 @@ li {
 
 .app-footer > nav {
     margin-inline: 2vw;
+}
+
+.booking-img-section {
+    background-color: #495E57;
+    padding-block: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.booking-img-section > img {
+    width: 23rem;
+    height: 19rem;
+    margin-inline: 2rem;
+    border-radius: 16px;
+}
+
+.template {
+    text-align: center;
 }
