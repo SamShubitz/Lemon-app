@@ -2,7 +2,7 @@ import BookingForm from "./BookingForm";
 
 export default function BookingPage() {
     return (
-        <>
+        <div className="booking-page">
             <div className="booking-img-section">
             <img src='restaurantchef.jpg' alt="chef"/>
             </div>
@@ -10,6 +10,6 @@ export default function BookingPage() {
                 <h1>Make a reservation!</h1>
                 <BookingForm />
             </div>
-        </>
+        </div>
     );
 }

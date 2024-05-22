@@ -1,12 +1,21 @@
 .app {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
     justify-content: space-between;
 }
 
 li {
     list-style: none;
+}
+
+a {
+    color: #333333;
+    display: block;
+}
+
+img {
+    overflow-x: hidden;
 }
 
 .button {
@@ -24,12 +33,19 @@ li {
 }
 
 .button:hover {
-    background-color: #dab918;
+    background-color: #e2c118;
 }
 
 .app-header {
+    background-color: white;
+    width: 100%;
+    height: 6rem;
+    position: sticky;
+    top: 0px;
+    box-shadow: 0 1px 4px #afafaf;
     display: flex;
     justify-content: center;
+    z-index: 2;
 }
 
 .header-image {
@@ -44,9 +60,38 @@ li {
 
 .hamburger {
     display: none;
+    z-index: 3;
 }
 
-.nav-list {
+.dropdown-nav {
+   display: none;
+   position: absolute;
+   top: 6rem;
+   background-color: white;
+   border-top: solid #f1f1f1 1px;
+   min-width: 75vw;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   border-bottom-left-radius: 4px;
+   border-bottom-right-radius: 4px;
+}
+
+.dropdown-nav-list {
+    padding-block: 1rem;
+    padding-inline: 0;
+    margin-inline: 2.5rem;
+}
+
+.dropdown-nav-list > li {
+    padding-block: .5rem;
+    border-bottom: solid #f1f2f2 1px;
+    padding-left: 1rem;
+}
+
+.dropdown-nav-list > li:hover {
+    background-color: #f9f9f9
+}
+
+.header-nav-list {
     margin-top: 2.5rem;
     margin-left: 3rem;
     font-weight: bold;
@@ -59,13 +104,17 @@ li {
         display: inline;
         margin-top: 2.5rem;
         margin-right: 1rem;
+        flex-shrink: 0;
     }
-    .nav-list {
+    .header-nav-list {
         display: none;
+    }
+    .dropdown-nav {
+        display: block;
     }
 }
 
-.nav-list > li {
+.header-nav-list > li {
     margin-right: .5rem;
     display: inline;
     flex: 1;
@@ -262,6 +311,7 @@ li {
     border-radius: 16px;
     width: 20rem;
     margin-top: -2rem;
+    align-self: center;
 }
 
 .about-image-section {
@@ -269,6 +319,7 @@ li {
     grid-template-columns: repeat(12, 1fr);
     position: relative;
     margin-left: 2rem;
+    align-self: center;
 }
 
 .about-image-section > img {
@@ -279,7 +330,6 @@ li {
     grid-column: 1 / span 8;
     grid-row: 1;
     margin-top: 30%;
-    z-index: 0;
 }
 
 .over-image {
@@ -308,28 +358,41 @@ li {
     background-color: #495E57;
     color: #EDEFEE;
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
     align-items: flex-start;
     padding-block: 1rem;
+}
+
+.app-footer > div {
+    margin-inline: 1rem;
 }
 
 .footer-logo {
     width: 4rem;
     height: auto;
     align-self: flex-start;
-    margin-right: 2rem;
-    margin-left: 1rem;
     margin-top: 1rem;
-
+    margin-inline: 1rem;
 }
 
-.app-footer > nav > ul {
-    font-size: .8rem;
+.footer-nav-list, .contact-nav > ul, .social-nav > ul {
     padding: 0;
+    font-size: .8rem;
+    margin-top: -.5rem;
 }
 
-.app-footer > nav {
-    margin-inline: 2vw;
+.footer-nav-list > li > a {
+    color: #EDEFEE;
+}
+
+.footer-nav, .contact-nav, .social-nav{
+    display: flex;
+    flex-direction: column;
+}
+
+.booking-page {
+    flex-grow: 1;
 }
 
 .booking-img-section {

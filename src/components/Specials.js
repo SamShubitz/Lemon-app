@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Template from './Template';
 
 const menu = [
-    { id: 1, image: './greek salad.jpg',title: 'Greek salad', price: '$12.99',
+    { id: 1, image: './greek salad.jpg', title: 'Greek salad', price: '$12.99',
     description: 'The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.'
     },
     { id: 2, image: './bruschetta.png', title: 'Bruschetta', price: '$5.99',
@@ -15,7 +15,7 @@ const menu = [
     }
 ]
 
-export default function ArticleTwo() {
+export default function Specials() {
     return (
         <article className="article-two">
             <section className="specials-header">
