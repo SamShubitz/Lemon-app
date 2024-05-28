@@ -10,8 +10,13 @@ li {
 }
 
 a {
-    color: #333333;
+    color: #383838;
     display: block;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #5a5a5a
 }
 
 img {
@@ -63,6 +68,10 @@ img {
     z-index: 3;
 }
 
+.hamburger:hover {
+    cursor: pointer;
+}
+
 .dropdown-nav {
    display: none;
    position: absolute;
@@ -71,12 +80,10 @@ img {
    border-top: solid #f1f1f1 1px;
    min-width: 75vw;
    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-   border-bottom-left-radius: 4px;
-   border-bottom-right-radius: 4px;
 }
 
 .dropdown-nav-list {
-    padding-block: 1rem;
+    padding-block: .5rem;
     padding-inline: 0;
     margin-inline: 2.5rem;
 }
@@ -111,6 +118,7 @@ img {
     }
     .dropdown-nav {
         display: block;
+        animation: slideDown 0.3s ease-out;
     }
 }
 
@@ -155,7 +163,7 @@ img {
     }
 }
 
-.article-two {
+.specials {
     margin-top: 3rem;
 }
 
@@ -311,6 +319,7 @@ img {
     border-radius: 16px;
     width: 20rem;
     margin-top: -2rem;
+    padding-bottom: 2rem;
     align-self: center;
 }
 
@@ -396,20 +405,78 @@ img {
 }
 
 .booking-img-section {
-    background-color: #495E57;
-    padding-block: 1rem;
+    background-color: #F4CE14;
+    padding-top: 1rem;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
 .booking-img-section > img {
-    width: 23rem;
-    height: 19rem;
+    width: 30rem;
+    height: auto;
     margin-inline: 2rem;
+    margin-top: 1rem;
+    border-radius: 8px;
+}
+
+.booking-section {
+    padding-bottom: 3rem;
+}
+
+.booking-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.booking-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.booking-form input[type="date"],
+.booking-form select,
+.booking-form input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.booking-form input[type="submit"] {
+    width: 100%;
+    background-color: #f4ce14;
+    color: #333;
+    margin-top: 1rem;
+    padding: 1rem 0;
+    border: none;
     border-radius: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.booking-form input[type="submit"]:hover {
+    background-color: #e4c113;
 }
 
 .template {
     text-align: center;
+}
+
+@keyframes slideDown {
+    from {
+        transform: scaleY(0);
+        transform-origin: top;
+    }
+    to {
+        transform: scaleY(1);
+        transform-origin: top;
+    }
 }

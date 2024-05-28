@@ -22,9 +22,9 @@ export default function Footer() {
           <nav className="social-nav">
             <h4>Social Media</h4>
             <ul>
-              <li>Address</li>
-              <li>Phone Number</li>
-              <li>Email</li>
+              <li>Facebook</li>
+              <li>Instagram</li>
+              <li>Twitter</li>
             </ul>
           </nav>
         </div>

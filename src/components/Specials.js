@@ -17,7 +17,7 @@ const menu = [
 
 export default function Specials() {
     return (
-        <article className="article-two">
+        <article className="specials">
             <section className="specials-header">
                 <h2>Specials</h2>
                 <Link to="/menu" element={<Template/>}>

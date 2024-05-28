@@ -1,5 +1,6 @@
-import Nav from './Nav.js'
-import HamburgerIcon from './HamburgerIcon.js'
+import Nav from './Nav.js';
+import HamburgerIcon from './HamburgerIcon.js';
+import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
@@ -16,7 +17,7 @@ export default function Header() {
 
     return (
       <header className="app-header">
-        <img className="header-image" src="/logo.svg" alt="logo"/>
+        <Link to="/"><img className="header-image" src="/logo.svg" alt="logo"/></Link>
         <Nav className="header-nav"/>
         <HamburgerIcon className="hamburger" onClick={toggleBurger}/>
         {isOpen && (

@@ -1,14 +1,13 @@
-import MainPage from './MainPage';
+import HomePage from './HomePage';
 import BookingPage from './BookingPage';
 import Template from './Template';
 import Chicago from './Chicago';
 import { Routes, Route } from 'react-router-dom';
 
-
-export default function Routing() {
+export default function Main() {
     return (
         <Routes>
-          <Route path="/" element={<MainPage />} />
+          <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<Chicago />} />
           <Route path="/menu" element={<Template />} />
           <Route path="/reservations" element={<BookingPage />} />
