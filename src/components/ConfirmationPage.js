@@ -17,7 +17,7 @@ export default function ConfirmationPage({phoneNumber}) {
         <span>
         <p>Thank you for your reservation!</p>
         <p>A confirmation text will be sent to {formattedNumber}.</p>
-        <p>We look forward to seeing you soon!</p>
+        <p>We look forward to seeing you soon.</p>
         </span>
     </div>
     );

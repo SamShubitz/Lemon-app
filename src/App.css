@@ -483,6 +483,8 @@ img {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 20px;
+    border: solid 1px #959595;
 }
 
 .confirmation-page > img {

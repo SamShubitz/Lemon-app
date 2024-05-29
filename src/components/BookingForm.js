@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react'
-import { fetchAPI, submitAPI } from '../api'
+import { useState } from 'react'
+import { submitAPI } from '../api'
 
-export default function BookingForm({phoneNumber, setPhoneNumber, setSubmitted}) {
+export default function BookingForm(props) {
 
 const [firstName, setFirstName] = useState('');
 const [lastName, setLastName] = useState('');
@@ -9,34 +9,38 @@ const [date, setDate] = useState('');
 const [timeSlot, setTimeSlot] = useState('');
 const [guests, setGuests] = useState(1);
 const [occasion, setOccasion] = useState('');
-const [availableTimes, setAvailableTimes] = useState([]);
 const [error, setError] = useState(false);
 
-useEffect(() => {
-    const updatedTimes = fetchAPI(new Date(date));
-    setAvailableTimes(updatedTimes);
-  }, [date]);
+const handleDateChange = (e) => {
+    const selectedDate = e.target.value;
+    setDate(selectedDate);
+    const nextDate = new Date(selectedDate);
+    props.updateTimes({type: 'update times', value: nextDate});
+}
 
-  const numberIsValid = () => {
+const numberIsValid = () => {
     const phoneRegex = /^\d{10}$/;
-    const strippedNumber = phoneNumber.replace(/\D/g, '');
+    const strippedNumber = props.phoneNumber.replace(/\D/g, '');
     return phoneRegex.test(strippedNumber);
-  };
+};
 
 const handleSubmit = (e) => {
     e.preventDefault();
+
     if (numberIsValid()) {
+    const phoneNumber = props.phoneNumber;
     const formData = {
         firstName,
         lastName,
-        phoneNumber,
         date,
+        phoneNumber,
         timeSlot,
         guests,
-        occasion,
+        occasion
     };
     const response = submitAPI(formData);
-    setSubmitted(response);
+
+    props.setSubmitted(response);
     } else {
         setError(true);
     }
@@ -50,13 +54,13 @@ return (
         <label htmlFor="last-name">Last Name</label>
         <input type="text" id="last-name" required value={lastName} aria-label="last name" onChange={(e) => setLastName(e.target.value)} />
         <label htmlFor="phone-number">Phone Number</label>
-        <input type="tel" id="phone-number" required value={phoneNumber} aria-label="phone number" onChange={(e) => setPhoneNumber(e.target.value)} />
+        <input type="tel" id="phone-number" required value={props.phoneNumber} aria-label="phone number" onChange={(e) => {props.setPhoneNumber(e.target.value); setError(false)}} />
         {error && <p className="error-text">Please enter a valid 10 digit number</p>}
         <label htmlFor="res-date">Choose date</label>
-        <input type="date" id="res-date" required value={date} aria-label="date" onChange={(e) => setDate(e.target.value)}/>
+        <input type="date" id="res-date" required value={date} aria-label="date" onChange={handleDateChange}/>
         <label htmlFor="res-time">Choose time</label>
         <select id="res-time" value={timeSlot} onChange={(e) => setTimeSlot(e.target.value)}>
-            {availableTimes.map((timeSlot) => (
+            {props.availableTimes.map((timeSlot) => (
                 <option key={timeSlot} value={timeSlot}>
                     {timeSlot}
                 </option>

@@ -1,3 +1,7 @@
+import overimage from '../assets/aboutimage2.jpg';
+import underimage from '../assets/aboutimage1.jpg';
+
+
 export default function Chicago() {
     return (
         <article className='about-section'>
@@ -12,8 +16,8 @@ export default function Chicago() {
                </p>
             </span>
             <div className='about-image-section'>
-            <img className='over-image' src='./aboutimage2.jpg' alt='mario and adrian 1'/>
-            <img className='under-image' src='./aboutimage1.jpg' alt='mario and adrian 2'/>
+            <img className='over-image' src={overimage} alt='mario and adrian 1'/>
+            <img className='under-image' src={underimage} alt='mario and adrian 2'/>
             </div>
         </article>
     );

@@ -1,5 +1,6 @@
 import Button from './Button'
 import { Link } from 'react-router-dom';
+import restaurantfood from '../assets/restaurantfood.jpg'
 
 export default function CallToAction() {
 return (
@@ -14,7 +15,7 @@ return (
             <Button className="button">Reserve a table</Button>
         </Link>
         </section>
-        <img className="hero-image" src="/restaurantfood.jpg" alt="promo plate" width="300"/>
+        <img className="hero-image" src={restaurantfood} alt="promo plate" width="300"/>
     </article>
     );
 }

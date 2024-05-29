@@ -1,9 +1,10 @@
 import Nav from "./Nav";
+import footerLogo from "../assets/logomonochrome.png"
 
 export default function Footer() {
     return (
       <footer className="app-footer">
-        <img className="footer-logo" src="/logomonochrome.png" alt="logo"/>
+        <img className="footer-logo" src={footerLogo} alt="logo"/>
         <div className="footer-nav-section">
           <h4>Overview</h4>
           <Nav className="footer-nav"/>
