@@ -3,6 +3,7 @@ import { useState } from 'react';
 import ConfirmationPage from "./ConfirmationPage"
 
 export default function BookingPage() {
+    const [phoneNumber, setPhoneNumber] = useState('')
     const [submitted, setSubmitted] = useState(false);
 
     return (
@@ -13,10 +14,11 @@ export default function BookingPage() {
             </div>
             {!submitted ? (
                 <div className="booking-section">
-                    <BookingForm setSubmitted={setSubmitted}/>
+                    <BookingForm setSubmitted={setSubmitted} phoneNumber={phoneNumber}
+                    setPhoneNumber={setPhoneNumber}/>
                 </div>
             ) : (
-                <ConfirmationPage />
+                <ConfirmationPage phoneNumber={phoneNumber}/>
             )}
         </div>
     );

@@ -5,6 +5,14 @@
     justify-content: space-between;
 }
 
+h1, h4 {
+    font-family: 'Markazi text', serif;
+}
+
+*:not(h1, h4) {
+    font-family: 'karla', sans-serif;
+  }
+
 li {
     list-style: none;
 }
@@ -175,7 +183,8 @@ img {
     margin-bottom: .5rem;
 }
 
-.specials-header > h2 {
+.specials-header > h2
+ {
     font-size: 2.5rem;
     font-weight: normal;
 }
@@ -247,6 +256,10 @@ img {
     color: #333333;
 }
 
+.delivery-icon-link {
+    display: inline;
+}
+
 .delivery-icon {
     margin-left: .5rem;
 }
@@ -268,7 +281,7 @@ img {
     gap: .7rem;
 }
 
-.testimonials-section > h2 {
+.testimonials-section > h1 {
     color: #EDEFEE;
     text-align: center;
     width: 100%;
@@ -402,22 +415,21 @@ img {
 
 .booking-page {
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .booking-img-section {
     background-color: #F4CE14;
-    padding-top: 1rem;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
 }
 
 .booking-img-section > img {
-    width: 30rem;
+    width: 30vw;
     height: auto;
-    margin-inline: 2rem;
-    margin-top: 1rem;
-    border-radius: 8px;
+    flex-shrink: 1;
+    margin-inline: 1rem;
 }
 
 .booking-section {
@@ -437,9 +449,8 @@ img {
     font-weight: bold;
 }
 
-.booking-form input[type="date"],
-.booking-form select,
-.booking-form input[type="number"] {
+.booking-form input,
+.booking-form select {
     width: 100%;
     padding: 8px;
     margin-bottom: 15px;
@@ -464,6 +475,31 @@ img {
 
 .booking-form input[type="submit"]:hover {
     background-color: #e4c113;
+}
+
+.confirmation-page {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.confirmation-page > img {
+    width: 3rem;
+    height: auto;
+    padding-bottom: 1rem;
+}
+
+.confirmation-page > span {
+    width: 23rem;
+    padding-bottom: 2rem;
+}
+
+.error-text {
+    color: red;
+    font-size: .8rem;
+    margin-top: -.5rem;
 }
 
 .template {

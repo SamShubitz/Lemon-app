@@ -11,7 +11,7 @@ const customerTestimonials = [
 export default function Testimonials() {
     return (
         <div className='testimonials-section'>
-            <h2>Testimonials</h2>
+            <h1>Testimonials</h1>
             <div className="testimonial-card-section">
                 {customerTestimonials.map((card) => {
                     return (

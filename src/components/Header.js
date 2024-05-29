@@ -19,7 +19,7 @@ export default function Header() {
       <header className="app-header">
         <Link to="/"><img className="header-image" src="/logo.svg" alt="logo"/></Link>
         <Nav className="header-nav"/>
-        <HamburgerIcon className="hamburger" onClick={toggleBurger}/>
+        <HamburgerIcon className="hamburger" aria-haspopup="true" aria-expanded={isOpen} onClick={toggleBurger}/>
         {isOpen && (
           <Nav className="dropdown-nav"/>
         )}
