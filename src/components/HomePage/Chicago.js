@@ -1,5 +1,5 @@
-import overimage from '../assets/aboutimage2.jpg';
-import underimage from '../assets/aboutimage1.jpg';
+import overimage from 'assets/aboutimage2.jpg';
+import underimage from 'assets/aboutimage1.jpg';
 
 
 export default function Chicago() {

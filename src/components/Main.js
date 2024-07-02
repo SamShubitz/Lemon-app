@@ -1,7 +1,7 @@
-import HomePage from './HomePage';
-import BookingPage from './BookingPage';
-import Template from './Template';
-import Chicago from './Chicago';
+import HomePage from './HomePage/HomePage';
+import BookingPage from './BookingSection/BookingPage';
+import Template from './Common/Template';
+import Chicago from './HomePage/Chicago';
 import { Routes, Route } from 'react-router-dom';
 
 export default function Main() {
@@ -13,6 +13,7 @@ export default function Main() {
           <Route path="/reservations" element={<BookingPage />} />
           <Route path="/order-online" element={<Template />} />
           <Route path="/login" element={<Template />} />
+          <Route path="*" element={<HomePage />} />
         </Routes>
     );
 }

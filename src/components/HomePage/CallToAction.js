@@ -1,6 +1,6 @@
-import Button from './Button'
+import Button from "components/Common/Button";
 import { Link } from 'react-router-dom';
-import restaurantfood from '../assets/restaurantfood.jpg'
+import restaurantfood from 'assets/restaurantfood.jpg'
 
 export default function CallToAction() {
 return (

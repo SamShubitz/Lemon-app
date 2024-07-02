@@ -1,10 +1,10 @@
-import Button from './Button';
+import Button from 'components/Common/Button';
 import Card from './Card'
 import { Link } from 'react-router-dom';
-import Template from './Template';
-import greekSaladImage from '../assets/greek salad.jpg';
-import bruschettaImage from '../assets/bruschetta.png';
-import lemonDessertImage from '../assets/lemondessert.jpg';
+import Template from 'components/Common/Template';
+import greekSaladImage from 'assets/greek salad.jpg';
+import bruschettaImage from 'assets/bruschetta.png';
+import lemonDessertImage from 'assets/lemondessert.jpg';
 
 const menu = [
     {

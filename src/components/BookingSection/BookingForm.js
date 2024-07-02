@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { submitAPI } from '../api'
+import { submitAPI } from '../../api'
 
 export default function BookingForm(props) {
 

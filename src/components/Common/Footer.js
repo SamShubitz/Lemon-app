@@ -1,5 +1,5 @@
 import Nav from "./Nav";
-import footerLogo from "../assets/logomonochrome.png"
+import footerLogo from "assets/logomonochrome.png"
 
 export default function Footer() {
     return (

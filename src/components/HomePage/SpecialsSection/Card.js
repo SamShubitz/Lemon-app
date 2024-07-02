@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import Template from './Template';
+import Template from 'components/Common/Template';
 
 export default function Card({title, price, description, image}) {
     return (

@@ -5,11 +5,11 @@
     justify-content: space-between;
 }
 
-h1, h4 {
+h1 {
     font-family: 'Markazi text', serif;
 }
 
-*:not(h1, h4) {
+*:not(h1) {
     font-family: 'karla', sans-serif;
   }
 
@@ -319,7 +319,6 @@ img {
 
 .about-section {
     flex-grow: 1;
-    background-color: #F4CE14;
     color: #000000;
     padding-top: 5rem;
     display: flex;

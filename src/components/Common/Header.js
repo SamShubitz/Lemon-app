@@ -3,7 +3,7 @@ import HamburgerIcon from './HamburgerIcon.js';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import headerLogo from '../assets/logo.svg';
+import headerLogo from 'assets/logo.svg';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);

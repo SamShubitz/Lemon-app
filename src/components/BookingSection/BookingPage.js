@@ -1,9 +1,9 @@
 import BookingForm from "./BookingForm";
 import { useState, useReducer } from 'react';
 import ConfirmationPage from "./ConfirmationPage"
-import { fetchAPI } from "../api";
-import restaurant from "../assets/restaurant.jpg";
-import restaurantchef from "../assets/restaurantchef.jpg";
+import { fetchAPI } from "../../api";
+import restaurant from "../../assets/restaurant.jpg";
+import restaurantchef from "../../assets/restaurantchef.jpg";
 
 
 export default function BookingPage() {
